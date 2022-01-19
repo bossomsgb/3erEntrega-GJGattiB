@@ -1,0 +1,369 @@
+
+section header {
+  box-shadow: 0px 5px 4px 3px rgb(41, 42, 71);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10%;
+  box-shadow: 0px 5px 4px 3px rgb(92 88 88 / 30%);
+  margin-bottom: 20px;
+}
+section h1 {
+  margin: 20px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  font-weight: 700;
+  font-size: 50px;
+}
+#boton-carrito {
+  border: none;
+  color: rgb(3, 7, 42);
+  font-size: 30px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  padding: 15px 20px;
+  transition: all .3s;
+}
+#boton-carrito:hover {
+  cursor: pointer;
+  color: white;
+  background-color: rgb(18, 35, 133);
+}
+#boton-carrito:focus {
+  outline: none;
+}
+
+#contenedor-productos {
+  max-width: 1200px;
+  margin: 60px auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.producto {
+  max-width: 30%;
+  padding: 10px;
+  margin-bottom: 20px;
+  box-shadow: 2px 6px 3px 3px rgba(0, 0, 0, 0.3);
+}
+
+select{
+  display: inline;
+  text-align: center;
+  border: 1px solid rgb(38, 153, 224);
+}
+.modal-contenedor {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all .5s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.modal-active {
+  opacity: 1;
+  visibility: visible;
+  z-index: 5;
+}
+
+.modal-carrito {
+  position: relative;
+  background-color: white;
+  min-width: 500px;
+  padding: 20px;
+  margin-top: -100%;
+  transition: all .5s;
+}
+
+.modal-active .modal-carrito {
+  margin-top: 0;
+}
+
+.modal-carrito h3 {
+  color: rgb(37, 196, 207);
+  padding-bottom: 5px;
+}
+.modal-carrito #carritoCerrar {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 20px;
+  color: rgb(65, 76, 225);
+  border: none;
+  background-color: white;
+}
+.modal-carrito #carritoCerrar:hover {
+  cursor: pointer;
+}
+.modal-carrito #carritoCerrar:focus {
+  outline: none;
+}
+.modal-carrito .precioProducto {
+  padding-top: 10px;
+  
+}
+.card .card-image .card-title{
+  color :rgb(65, 206, 225);
+  position:unset
+}
+
+.productoEnCarrito {
+  border-left: 5px solid lightblue;
+  border-bottom-left-radius: 3px;
+  border-top-left-radius: 3px;
+  margin: 5px 0;
+  padding: 5px 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.productoEnCarrito:hover {
+  border-left: 5px solid rgb(65, 76, 225);
+}
+
+.boton-eliminar {
+  background-color: white;
+  color: rgb(39, 129, 58);
+  border: none;
+  font-size: 20px;
+}
+.boton-eliminar:hover {
+cursor: pointer;
+}
+.boton-eliminar:focus {
+outline: none;
+}
+
+
+
+/*Segundo modal*/
+html {
+  --card-color: #cacaca;
+  --text-color: #e1e1e1;
+}
+#finalizar{
+  display: none;
+}
+
+.container1 .col1 {
+  perspective: 1000;
+  transform-style: preserve-3d;
+}
+.container1 .col1 .card {
+  position: relative;
+  width: 420px;
+  height: 250px;
+  margin-bottom: 85px;
+  margin-right: 10px;
+  border-radius: 17px;
+  box-shadow: 0 5px 20px -5px rgba(0, 0, 0, 0.1);
+  transition: all 1s;
+  transform-style: preserve-3d;
+}
+.container1 .col1 .card .front {
+  position: absolute;
+  background: var(--card-color);
+  border-radius: 17px;
+  padding: 50px;
+  width: 100%;
+  height: 100%;
+  transform: translateZ(1px);
+  transition: background 0.3s;
+  z-index: 50;
+  background-image: repeating-linear-gradient(45deg, rgba(255, 255, 255, 0) 1px, rgba(255, 255, 255, 0.03) 2px, rgba(255, 255, 255, 0.04) 3px, rgba(255, 255, 255, 0.05) 4px);
+  backface-visibility: hidden;
+}
+
+.modal{
+  height: 710px;
+  width: 860px;
+}
+.container1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 680px;
+}
+.container1 .col1 .card .front .type {
+  position: absolute;
+  width: 75px;
+  height: 45px;
+  top: 20px;
+  right: 20px;
+}
+.container1 .col1 .card .front .type img {
+  width: 100%;
+  float: right;
+}
+.container1 .col1 .card .front .card_number {
+  position: absolute;
+  font-size: 26px;
+  font-weight: 500;
+  letter-spacing: -1px;
+  top: 110px;
+  color: var(--text-color);
+  word-spacing: 3px;
+  transition: color 0.5s;
+}
+.container1 .col1 .card .front .date {
+  position: absolute;
+  bottom: 40px;
+  right: 55px;
+  width: 90px;
+  height: 35px;
+  color: var(--text-color);
+  transition: color 0.5s;
+}
+.container1 .col1 .card .front .date .date_value {
+  font-size: 12px;
+  position: absolute;
+  margin-left: 22px;
+  margin-top: 12px;
+  color: var(--text-color);
+  font-weight: 500;
+  transition: color 0.5s;
+}
+.container1 .col1 .card .front .date:after {
+  content: "MONTH / YEAR";
+  position: absolute;
+  display: block;
+  font-size: 7px;
+  margin-left: 20px;
+}
+.container1 .col1 .card .front .date:before {
+  content: "valid \athru";
+  position: absolute;
+  display: block;
+  font-size: 8px;
+  white-space: pre;
+  margin-top: 8px;
+}
+.container1 .col1 .card .front .fullname {
+  position: absolute;
+  font-size: 20px;
+  bottom: 40px;
+  color: var(--text-color);
+  transition: color 0.5s;
+}
+.container1 .col1 .card .back {
+  position: absolute;
+  width: 100%;
+  border-radius: 17px;
+  height: 100%;
+  background: var(--card-color);
+  transform: rotateY(180deg);
+}
+.container .col1 .card .back .magnetic {
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  background: rgba(0, 0, 0, 0.7);
+  margin-top: 25px;
+}
+.container1 .col1 .card .back .bar {
+  position: absolute;
+  width: 80%;
+  height: 37px;
+  background: rgba(255, 255, 255, 0.7);
+  left: 10px;
+  margin-top: 100px;
+}
+.container1 .col1 .card .back .seccode {
+  font-size: 13px;
+  color: var(--text-color);
+  font-weight: 500;
+  position: absolute;
+  top: 100px;
+  right: 40px;
+}
+.container1 .col1 .card .back .chip {
+  bottom: 45px;
+  left: 10px;
+}
+.container1 .col1 .card .back .disclaimer {
+  position: absolute;
+  width: 65%;
+  left: 80px;
+  color: #f1f1f1;
+  font-size: 8px;
+  bottom: 55px;
+}
+.container1 .col2 input {
+  display: block;
+  width: 260px;
+  height: 30px;
+  padding-left: 10px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  margin: 7px;
+  font-size: 17px;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.05);
+  border: none;
+  transition: background 0.5s;
+}
+.container1 .col2 input:focus {
+  outline-width: 0;
+  background: rgba(31, 134, 252, 0.15);
+  transition: background 0.5s;
+}
+.container1 .col2 label {
+  padding-left: 8px;
+  font-size: 15px;
+  color: #444;
+}
+.container1 .col2 .ccv {
+  width: 40%;
+}
+.container1 .col2 .buy {
+  width: 260px;
+  height: 50px;
+  position: relative;
+  display: block;
+  margin: 20px auto;
+  border-radius: 10px;
+  border: none;
+  background: #42c2df;
+  color: white;
+  font-size: 20px;
+  transition: background 0.4s;
+  cursor: pointer;
+}
+.container1 .col2 .buy i {
+  font-size: 20px;
+}
+.container1 .col2 .buy:hover {
+  background: #3594a9;
+  transition: background 0.4s;
+}
+
+.chip {
+  position: absolute;
+  width: 55px;
+  height: 40px;
+  background: #bbb;
+  border-radius: 7px;
+}
+.chip:after {
+  content: "";
+  display: block;
+  width: 35px;
+  height: 25px;
+  border-radius: 4px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: #ddd;
+}

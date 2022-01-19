@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AMANTIS</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/df59baf6b8.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <section class="p-6 bg-primary">
+    <header>
+      <h1>Amantis</h1>
+      <button id="boton-carrito"><i class="fas fa-shopping-cart"></i><span id="contadorCarrito">0</span></button>
+    </header>
+  </section>
+
+  <section class="p-5 col-12">
+    <select id="selecModelo">
+      <option value="all">Todos</option>
+      <option value="Art. Amanda">Art. Amanda</option>
+      <option value="Art. Andy">Art. Andy</option>
+      <option value="Art. Miguel">Art. Miguel</option>
+    </select>
+
+    <main id="contenedor-productos"></main>
+
+    <div class="modal-contenedor">
+      <div class="modal-carrito">
+        <h3>Carrito</h3>
+        <button id="carritoCerrar"><i class="fas fa-times-circle"></i></button>
+        <div id="carrito-contenedor"></div>
+        <p class="precioProducto">Precio total: $<span id="precioTotal"></span></p>
+        <div id="terminar" style="display: flex; justify-content: flex-end;"></div>
+      </div>
+    </div>
+
+    <!-- segundo modal -->
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+        <div class="container1">
+          <div class="col1">
+            <div class="card">
+              <div id="front" class="front">
+                <div class="type">
+                  <img class="bankid" />
+                </div>
+                <span class="chip"></span>
+                <span class="card_number">&#x25CF;&#x25CF;&#x25CF;&#x25CF; &#x25CF;&#x25CF;&#x25CF;&#x25CF;
+                  &#x25CF;&#x25CF;&#x25CF;&#x25CF; &#x25CF;&#x25CF;&#x25CF;&#x25CF; </span>
+                <div class="date"><span class="date_value">MM / YYYY</span></div>
+                <span class="fullname">TITULAR</span>
+              </div>
+              <div id="back" class="back">
+                <div class="magnetic"></div>
+                <div class="bar"></div>
+                <span class="seccode">&#x25CF;&#x25CF;&#x25CF;</span>
+                <span class="chip"></span><span class="disclaimer">Lorem, ipsum dolor sit amet consectetur adipisicing
+                  elit. Libero temporibus, totam assumenda, accusamus asperiores eaque fugiat illo maiores obcaecati at
+                  saepe expedita ab voluptatum quibusdam ipsa beatae veniam consectetur atque! </span>
+              </div>
+            </div>
+          </div>
+          <div class="col2">
+            <label>Número de Tarjeta</label>
+            <input class="number" type="text" required ng-model="ncard" maxlength="19"
+              onkeypress='return event.charCode >= 48 && event.charCode <= 57' />
+            <label>Nombre del Titular</label>
+            <input class="inputname" type="text" required placeholder="" />
+            <label>Fecha de Vencimineto</label>
+            <input class="expire" type="text" required placeholder="MM / YYYY" />
+            <label>Número Seguridad</label>
+            <input class="ccv" type="text" placeholder="CVC" required maxlength="3"
+              onkeypress='return event.charCode >= 48 && event.charCode <= 57' />
+            <button id="fin-compra" class="buy"><i class="material-icons">lock</i>Pagar $<span
+                id="pagar">--.--</span></button>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat"><i class="far fa-times-circle"></i></a>
+      </div>
+    </div>
+  </section>
+
+
+  <div class="container">
+    <h2 class="text-center mt-5 mb-4">Pinturas</h2>
+    <p class="text-center mb-5">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus sit officiis commodi rem atque accusamus
+      consequuntur tempora unde nihil. Numquam, saepe amet. Nemo voluptatum cupiditate ipsum adipisci? Molestias hic
+      molestiae, labore, accusamus harum omnis provident temporibus ullam doloribus vero laboriosam?
+    </p>
+  </div>
+
+  <!--FOOTER-->
+  <footer class="text-light bg-primary pt-3 pb-3">
+    <div class="container text-center text-md-left">
+      <div class="row text-center text-md-left">
+        <div class="col-md-12 col-lg-3 mx-auto mt-3">
+          <h5 class="text-uppercase mb-4 textos-con-color">Arte</h5>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea, vero omnis!
+          </p>
+        </div>
+        <div class="col-md-12 col-lg-3 mx-auto mt-3">
+          <h5 id="Redes" class="text-uppercase mb-4 font-weight-bold">Redes</h5>
+          <ul class="list-unstyled list-inline">
+            <li class="list-inline-item"><a href="" target="blank_" class="btn-floating btn-sm text-white"
+                style="font-size: 23px"><i class="fab fa-facebook"></i></a></li>
+            <li class="list-inline-item">
+              <a href="" target="blank_" class="btn-floating btn-sm text-white" style="font-size: 23px"><i
+                  class="fab fa-twitter"></i></a>
+            </li>
+            <li class="list-inline-item">
+              <a href="" target="blank_" class="btn-floating btn-sm text-white" style="font-size: 23px"><i
+                  class="fab fa-instagram"></i></a>
+            </li>
+            <li class="list-inline-item"><a href="" target="blank_" class="btn-floating btn-sm text-white"
+                style="font-size: 23px"><i class="fab fa-youtube"></i></a></li>
+          </ul>
+        </div>
+        <div class="col-md-12 col-lg-3 mx-auto mt-3">
+          <img src="./img/creasinlimites.png" alt="logo" class="imgLogo img-fluid" />
+        </div>
+        <div class="col-md-12 col-lg-3 mx-auto mt-3">
+          <h5 class="text-uppercase mb-4 font-weight-bold textos-con-color">
+            Contacto</h5>
+          <p><i class="fas fa-home mr-3"></i> San Martín, Buenos Aires, Argentina.</p>
+          <p><i class="fas fa-envelope mr-3"></i> amantis@gmail.com</p>
+          <p><i class="fab fa-whatsapp mr-3"></i> +54 11 2233-4455</p>
+        </div>
+      </div>
+      <hr class="mb-3" />
+      <div class="row">
+        <div class="col-12">
+          <p class="my-2">Hecho por:<strong class="textos-con-color">Bossomsg</strong></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <script src="data/stock.json"></script>
+  <script src="modal.js"></script>
+  <script src="checkout.js"></script>
+  <script src="app.js"></script>
+
+</body>
+
+</html>

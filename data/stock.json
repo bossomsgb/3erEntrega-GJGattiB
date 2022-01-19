@@ -1,0 +1,65 @@
+[
+    {
+    "id":1,
+    "nombre":"Paz",
+    "Modelo":"Art. Miguel", 
+    "precio":1200, 
+    "img":"img/imagen1.jpg", 
+    "cantidad":1},
+    {
+    "id":2, 
+    "nombre":"Amor",
+    "Modelo":"Art. Miguel", 
+    "precio":3500, 
+    "img":"img/imagen2.jpg", 
+    "cantidad":1
+},
+    {
+    "id":3,
+    "nombre":"Guerra",
+    "Modelo":"Art. Andy",
+    "precio":2500,
+    "img":"img/imagen3.jpg",
+    "cantidad":1
+},
+    {
+    "id":4,     
+    "nombre":"Aventura",
+    "Modelo":"Art. Andy",
+    "precio":1400,
+    "img":"img/imagen4.jpg",
+    "cantidad":1
+},
+    {
+    "id":5,
+    "nombre":"Pasión",
+    "Modelo":"Art. Amanda",
+    "precio":8000,
+    "img":"img/imagen5.jpg",
+    "cantidad":1
+},
+    {
+    "id":6,
+    "nombre":"Armonía",
+    "Modelo":"Art. Amanda", 
+    "precio":20000, 
+    "img":"img/imagen6.jpg",
+    "cantidad":1
+},
+    {
+    "id":7,
+    "nombre":"Alegría",
+    "Modelo":"Art. Amanda",
+    "precio":6500,
+    "img":"img/imagen7.jpg",
+    "cantidad":1
+},    
+    {
+    "id":8,
+    "nombre":"Cordura",
+    "Modelo":"Art. Amanda",
+    "precio":7000,
+    "img":"img/imagen8.jpg",
+    "cantidad":1
+}
+]
